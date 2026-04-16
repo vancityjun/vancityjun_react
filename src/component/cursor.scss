@@ -1,9 +1,9 @@
 *,
 body,
 html {
-  cursor: none;
+  cursor: none !important;
   @media screen and (max-width: 600px) {
-    cursor: auto;
+    cursor: auto !important;
   }
 }
 .cursor,

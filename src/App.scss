@@ -24,6 +24,21 @@
   width: 100vw;
 }
 
+
+.App.slide-open {
+  .blog-slider__pagination,
+  .arrows {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+}
+
+.blog-slider__pagination,
+.arrows {
+  transition: opacity 0.4s ease;
+}
+
 .logo {
   color: #fff;
   font-family: $secondary-font;
