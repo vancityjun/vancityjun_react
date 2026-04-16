@@ -1,54 +1,38 @@
 {
   "projects": [
     {
-      "title": "Parx",
-      "category": "Mobile App Development",
-      "background": "bcparks.png",
-      "date": "March 2020",
-      "shortDescription": "A mobile application for tracking the amount of time (green time) a user spends in parks.",
-      "url": "",
+      "title": "BsideU",
+      "category": "Web App Development",
+      "background": "",
+      "date": "April 2026",
+      "shortDescription": "web based",
+      "url": "https://app.bsideu.ca/",
       "description": "",
       "pc": [],
-      "mobile": [
-        "bcpark-login.png",
-        "bcpark-calendar.png",
-        "bcpark-explore.png",
-        "bcpark-explore-detail.png",
-        "bcpark-timer.png",
-        "bcpark-timer-active.png",
-        "bcpark-mood.png",
-        "bcpark-activity.png",
-        "bcpark-text-input.png",
-        "bcpark-setting.png"
-      ]
+      "mobile": [],
+      "hide": true
     },
     {
-      "title": "Boomtown",
+      "title": "Para Siempre",
       "category": "Web App Development",
-      "background": "boomtown.png",
-      "date": "November 2019",
-      "shortDescription": "web based sharing app",
-      "url": "https://jun-boomtown.netlify.com/",
-      "description": "",
-      "pc": [
-        "boomtown-main.png",
-        "boomtown-items.png",
-        "boomtown-mypage.png",
-        "boomtown-shareitems.png"
-      ],
-      "mobile": []
+      "background": "",
+      "date": "May 2025",
+      "shortDescription": "Mobile friendly Wedding web invitation",
+      "url": "https://www.para-siempre.love/",
+      "description": "Supporting gallary users to updoad their wedding photos, and download and RRSP",
+      "pc": [],
+      "mobile": [],
+      "hide": true
     },
     {
       "title": "furence",
-      "category": "Web Design & Development",
+      "category": "UI Design & Development",
       "background": "furence.png",
       "date": "August 2018",
       "shortDescription": "company website",
       "url": "http://www.furence.com/",
       "description": "This website has been renovated with Codeignitor framework.",
-      "pc": [
-        "furence1600all.png"
-      ],
+      "pc": ["furence1600all.png"],
       "mobile": [
         "furence-mobile-1.png",
         "furence-mobile-2.png",
@@ -56,22 +40,6 @@
         "furence-mobile-4.png",
         "furence-mobile-5.png",
         "furence-mobile-6.png"
-      ]
-    },
-    {
-      "title": "R10",
-      "category": "App Development",
-      "background": "r10.png",
-      "date": "Jan 2020",
-      "shortDescription": "A mobile app for a conference called R10",
-      "url": "",
-      "description": "React Native cross plarform Mobile App",
-      "pc": [],
-      "mobile": [
-        "r10-about.png",
-        "r10-schedule.png",
-        "r10-session.png",
-        "r10-speaker.png"
       ]
     },
     {
@@ -87,7 +55,8 @@
         "perry-sherry-location.png",
         "perry-sherry-rsvp.png"
       ],
-      "mobile": []
+      "mobile": [],
+      "hide": true
     },
     {
       "title": "After Party",
@@ -98,12 +67,7 @@
       "url": "https://jjent.netlify.com/",
       "description": "",
       "pc": [],
-      "mobile": [
-        "jjent-1.png",
-        "jjent-2.png",
-        "jjent-3.png",
-        "jjent-4.png"
-      ]
+      "mobile": ["jjent-1.png", "jjent-2.png", "jjent-3.png", "jjent-4.png"]
     },
     {
       "title": "ITSM",
@@ -132,9 +96,7 @@
       "shortDescription": "Company Landing Page",
       "url": "https://furence-landing.netlify.com/",
       "description": "",
-      "pc": [
-        "furence-landing-pc.png"
-      ],
+      "pc": ["furence-landing-pc.png"],
       "mobile": []
     },
     {
@@ -145,9 +107,7 @@
       "shortDescription": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
       "url": "https://vancityjun.github.io/sakura-town/",
       "description": "",
-      "pc": [
-        "sakura.png"
-      ],
+      "pc": ["sakura.png"],
       "mobile": [],
       "customContent": ""
     },
@@ -161,7 +121,8 @@
       "description": "",
       "pc": [],
       "mobile": [],
-      "customContent": "<div class=\"videoWrapper\" style=\"display:none;\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pGe_YpY2bG8?rel=0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>"
+      "customContent": "recsee",
+      "hide": true
     },
     {
       "title": "Award wining",
@@ -171,13 +132,9 @@
       "shortDescription": "",
       "url": "",
       "description": "",
-      "pc": [
-        "insmart.jpg",
-        "wwf.jpg",
-        "febreze.jpg",
-        "natural.jpg"
-      ],
-      "mobile": []
+      "pc": ["insmart.jpg", "wwf.jpg", "febreze.jpg", "natural.jpg"],
+      "mobile": [],
+      "hide": true
     }
   ]
 }
