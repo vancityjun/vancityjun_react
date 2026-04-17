@@ -207,14 +207,9 @@
       }
 
       .project-content {
-        display: none;
         width: 100%;
         background: #e4e9ef;
         padding: 5% 0;
-
-        &.active {
-          display: block;
-        }
 
         .device {
           padding-bottom: 20px;
@@ -307,10 +302,9 @@
   overflow: hidden;
   position: absolute;
   right: 300px;
-  // Only transition the properties needed for the slide-in animation.
-  // Avoid "transition: all" — it animates height between 100vh and auto during
-  // slide transitions, briefly expanding the container and revealing screenshots.
-  transition: right 0.5s, opacity 0.5s, transform 0.5s;
+  // Only transition right — opacity and transform are handled on child elements.
+  // Avoid "transition: all" which would animate height and reveal screenshots.
+  transition: right 0.5s;
   transform: translate3d(0, 0, 0) scale(1);
   will-change: transform;
   -webkit-overflow-scrolling: touch;
