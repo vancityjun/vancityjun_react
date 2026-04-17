@@ -293,6 +293,12 @@
 }
 
 // ─── image container ──────────────────────────────────────────────────────────
+// Hide project screenshots globally — only visible when slide is open via App.slide-open
+.project-content {
+  display: none;
+  &.active { display: block; }
+}
+
 .blog-slider__img {
   width: 100%;
   height: 100vh;
@@ -301,7 +307,10 @@
   overflow: hidden;
   position: absolute;
   right: 300px;
-  transition: all 0.5s;
+  // Only transition the properties needed for the slide-in animation.
+  // Avoid "transition: all" — it animates height between 100vh and auto during
+  // slide transitions, briefly expanding the container and revealing screenshots.
+  transition: right 0.5s, opacity 0.5s, transform 0.5s;
   transform: translate3d(0, 0, 0) scale(1);
   will-change: transform;
   -webkit-overflow-scrolling: touch;
