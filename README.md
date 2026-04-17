@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vancity Jun — Portfolio
 
-## Available Scripts
+Portfolio website for **Hyung-Jun Lee**, a full-stack Software Engineer with 8+ years of experience building and shipping production web applications. Specializes in React and TypeScript on the frontend, with solid backend experience across Node.js, Ruby on Rails, and PostgreSQL.
 
-In the project directory, you can run:
+Live site: [vancityjun.com](https://www.vancityjun.com)
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+| | |
+|---|---|
+| Framework | React 18 |
+| Build tool | Vite |
+| Slider | Swiper 11 (vertical fade, rewind) |
+| Animation | GSAP 3 |
+| Styling | SCSS |
+| Icons | Font Awesome 6 |
+| Deployment | GitHub Pages (`gh-pages`) |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+```bash
+npm install
+npm run dev
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Scripts
 
-### `npm run eject`
+| Command | Description |
+|---|---|
+| `npm run dev` | Start local dev server |
+| `npm run build` | Production build → `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run deploy` | Deploy to GitHub Pages |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+src/
+├── component/       # UI components (Slide, Topbar, Menu, Cursor, ...)
+├── helper/          # Hooks and image imports
+├── data.json        # Project content (title, description, images, links)
+├── App.jsx          # Root component, Swiper setup
+├── App.scss         # Global layout styles
+└── variables.scss   # SCSS tokens (colors, fonts)
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Adding / Editing Projects
 
-## Learn More
+All project data lives in `src/data.json`. Each entry supports:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```json
+{
+  "title": "Project Name",
+  "category": "UI Design & Development",
+  "date": "Month YYYY",
+  "shortDescription": "One-line description shown in the slider",
+  "background": "filename.jpg",
+  "url": "https://...",
+  "pc": ["screenshot1.png", "screenshot2.png"],
+  "mobile": ["mobile1.png"],
+  "hide": false
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Set `"hide": true` to remove a project from the slider without deleting it.
 
-### Code Splitting
+## Config
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+In `src/App.jsx`:
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```js
+const AUTO_SLIDE = false   // set true to enable auto-advance + progress bar
+const AUTOPLAY_DELAY = 7000  // ms between auto slides
+```
