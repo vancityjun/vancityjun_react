@@ -71,7 +71,7 @@ const App = () => {
         thresholdDelta: 5, // lower = more sensitive (triggers slide change sooner)
         thresholdTime: 400, // cooldown between slides to prevent double-skip on trackpad
       },
-      threshold: 3, // min touch drag distance in px (lower = more sensitive on mobile)
+      threshold: 0, // min touch drag distance in px (lower = more sensitive on mobile)
       keyboard: { enabled: true, onlyInViewport: false },
       pagination: {
         el: '.blog-slider__pagination',
