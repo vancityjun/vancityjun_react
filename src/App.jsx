@@ -147,7 +147,7 @@ const App = () => {
     if (!menu || !scrollWrap) return
     const wrapHeight = menu.clientHeight
     const listHeight = scrollWrap.clientHeight
-    const dP = e.nativeEvent.pageY / wrapHeight
+    const dP = e.clientY / wrapHeight
     gsap.to(scrollWrap, { duration: 0.1, y: -(listHeight * dP - listHeight / 2), ease: 'none' })
   }, [isMobile])
 
