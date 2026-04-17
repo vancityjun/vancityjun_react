@@ -119,10 +119,6 @@ const App = () => {
   }, [])
 
   const handleCloseSlide = useCallback(() => {
-    // Reset scroll position in the image container before removing the active state,
-    // so the hero image (not the screenshots below it) is visible after closing.
-    const imgEl = document.querySelector('.blog-slider__item.active .blog-slider__img')
-    if (imgEl) imgEl.scrollTop = 0
     setOpenSlideId(null)
   }, [])
 

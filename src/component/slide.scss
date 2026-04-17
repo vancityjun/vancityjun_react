@@ -157,37 +157,11 @@
   }
 
   // ── open state ─────────────────────────────────────────────────────────────
-  // .blog-slider__img is position:absolute so it doesn't contribute to the
-  // slide's scrollHeight. Instead, make the img itself the scroll container:
-  // it sits at 100vh, and the content inside (project-header 100vh +
-  // project-content screenshots) overflows it naturally.
-  &.active {
-    .content_wrapper {
-      right: -45%;
-      @media screen and (max-width: 576px) {
-        right: -100%;
-      }
-    }
-
-    .blog-slider__img {
-      right: 0;
-      height: 100vh;             // fixed viewport height → scroll within
-      overflow-y: auto;          // img is the scroll container
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      touch-action: pan-y;       // allow vertical touch-scroll
-
-      .project-header {
-        opacity: 1;
-        height: 100vh;
-        width: 100%;
-      }
-
-      .info-background {
-        opacity: 1;
-      }
-    }
-  }
+  // We do NOT add a class directly to the .swiper-slide element — doing so
+  // causes Swiper to strip swiper-slide-active from its DOM class management.
+  // Instead we combine .App.slide-open (on the root div) with Swiper's own
+  // .swiper-slide-active so no Swiper-managed element is touched by React.
+  // (Handled in App.scss — kept here as a comment for cross-reference.)
 
   // ── profile ────────────────────────────────────────────────────────────────
   &.profile {

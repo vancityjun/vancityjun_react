@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react'
 import projectImages from '../helper/projectImages.js'
 import ProjectContent from './ProjectContent.jsx'
 
@@ -20,12 +21,36 @@ const Slide = ({
 
   const hasDetailContent = Boolean(pc?.length || mobile?.length || customContent)
 
+  // Ref for the image/scroll container
+  const imgRef = useRef(null)
+
+  useEffect(() => {
+    const el = imgRef.current
+    if (!el) return
+
+    if (!isOpen) {
+      // Bug 2 fix: reset scroll position when project closes so hero is visible
+      el.scrollTop = 0
+      return
+    }
+
+    // Bug 1 fix: Swiper intercepts wheel events at the container level.
+    // Manually handle wheel on the img so the user can scroll through screenshots.
+    const onWheel = (e) => {
+      e.stopPropagation()
+      el.scrollTop += e.deltaY
+    }
+
+    el.addEventListener('wheel', onWheel, { passive: true })
+    return () => el.removeEventListener('wheel', onWheel)
+  }, [isOpen])
+
   return (
     <div
-      className={`blog-slider__item swiper-slide project${id}${isOpen ? ' active' : ''}`}
+      className={`blog-slider__item swiper-slide project${id}`}
       data-hash={`slide${id}`}
     >
-      <div className="blog-slider__img">
+      <div className="blog-slider__img" ref={imgRef}>
         <section className="project-header" style={bgStyle}>
           <div className="info-background"></div>
           <div className={`project-info${isOpen ? ' active' : ''}`}>
