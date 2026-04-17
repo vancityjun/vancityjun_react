@@ -22,18 +22,15 @@ const Cursor = () => {
     document.body.addEventListener('mousemove', onMouseMove)
 
     // Event delegation — one pair of listeners handles all hover targets,
-    // including elements added after mount.
-    const matches = (el) =>
-      el && el.matches &&
-      el.matches('.hover-target, a, button, .swiper-pagination-bullet')
-
+    // including elements added after mount. closest() checks the element
+    // itself first, so no separate matches() call is needed.
     const onMouseOver = (e) => {
-      if (matches(e.target) || matches(e.target.closest('.hover-target, a, button, .swiper-pagination-bullet'))) {
+      if (e.target.closest('.hover-target, a, button, .swiper-pagination-bullet')) {
         onHover()
       }
     }
     const onMouseOut = (e) => {
-      if (matches(e.target) || matches(e.target.closest('.hover-target, a, button, .swiper-pagination-bullet'))) {
+      if (e.target.closest('.hover-target, a, button, .swiper-pagination-bullet')) {
         onUnhover()
       }
     }

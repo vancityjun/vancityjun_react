@@ -35,13 +35,13 @@ const Slide = ({
     }
 
     // Bug 1 fix: Swiper intercepts wheel events at the container level.
-    // Manually handle wheel on the img so the user can scroll through screenshots.
+    // stopPropagation prevents Swiper from stealing the event; the browser
+    // then handles native scroll on the overflow-y:auto container naturally.
     const onWheel = (e) => {
       e.stopPropagation()
-      el.scrollTop += e.deltaY
     }
 
-    el.addEventListener('wheel', onWheel, { passive: true })
+    el.addEventListener('wheel', onWheel)
     return () => el.removeEventListener('wheel', onWheel)
   }, [isOpen])
 
