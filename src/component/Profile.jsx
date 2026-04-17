@@ -17,9 +17,10 @@ const Profile = () => {
           <div className="blog-slider__title">Jun Lee</div>
           <div className="blog-slider__text">
             <q>
-              I'm a Software Engineer in US and Canada.
-              <br /> I'd like to learn and discover new things every day to
-              improve myself and am very adaptable.
+              Full-stack Software Engineer who specializes in building
+              fast, scalable web applications from the UI down to the API.
+              I take ownership of what I ship and care about the product,
+              not just the code.
             </q>
           </div>
           <div className="info">
