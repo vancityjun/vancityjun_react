@@ -66,7 +66,12 @@ const App = () => {
         ? { delay: AUTOPLAY_DELAY, disableOnInteraction: false }
         : false,
       watchSlidesProgress: true,
-      mousewheel: { sensitivity: 3 },
+      mousewheel: {
+        sensitivity: 1,
+        thresholdDelta: 5, // lower = more sensitive (triggers slide change sooner)
+        thresholdTime: 400, // cooldown between slides to prevent double-skip on trackpad
+      },
+      threshold: 10, // min touch drag distance in px (lower = more sensitive on mobile)
       keyboard: { enabled: true, onlyInViewport: false },
       pagination: {
         el: '.blog-slider__pagination',

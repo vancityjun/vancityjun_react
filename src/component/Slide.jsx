@@ -29,19 +29,23 @@ const Slide = ({
     if (!el) return
 
     if (!isOpen) {
-      // Bug 2 fix: reset scroll position when project closes so hero is visible
-      el.scrollTop = 0
-      return
+      el.scrollTop = 0;
+      return;
     }
 
-    // Bug 1 fix: Swiper intercepts wheel events at the container level.
-    // stopPropagation prevents Swiper from stealing the event; the browser
-    // then handles native scroll on the overflow-y:auto container naturally.
+    // SCROLL_SPEED: 1.0 = browser default, < 1.0 = slower, > 1.0 = faster
+    const SCROLL_SPEED = 1.0
+
     const onWheel = (e) => {
       e.stopPropagation()
+      if (SCROLL_SPEED !== 1.0) {
+        e.preventDefault()
+        el.scrollTop += e.deltaY * SCROLL_SPEED
+      }
     }
 
-    el.addEventListener('wheel', onWheel)
+    // passive:true when speed=1 (browser handles it), false when overriding
+    el.addEventListener('wheel', onWheel, { passive: SCROLL_SPEED === 1.0 })
     return () => el.removeEventListener('wheel', onWheel)
   }, [isOpen])
 
