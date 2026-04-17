@@ -61,17 +61,19 @@ const App = () => {
       rewind: true,
       preventClicks: false,
       preventClicksPropagation: false,
-      shortSwipes: false,
+      shortSwipes: true,         // allow quick flicks on mobile
+      longSwipesRatio: 0.1,      // only 10% of height needed for a long swipe (was 50%)
+      longSwipesMs: 200,         // swipe registered after 200ms (was 300ms)
       autoplay: AUTO_SLIDE
         ? { delay: AUTOPLAY_DELAY, disableOnInteraction: false }
         : false,
       watchSlidesProgress: true,
       mousewheel: {
         sensitivity: 1,
-        thresholdDelta: 5, // lower = more sensitive (triggers slide change sooner)
-        thresholdTime: 400, // cooldown between slides to prevent double-skip on trackpad
+        thresholdDelta: 5,
+        thresholdTime: 400,
       },
-      threshold: 0, // min touch drag distance in px (lower = more sensitive on mobile)
+      threshold: 5,              // min touch drag distance in px — lower = more sensitive
       keyboard: { enabled: true, onlyInViewport: false },
       pagination: {
         el: '.blog-slider__pagination',
