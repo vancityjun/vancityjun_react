@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import projectImages from '../helper/projectImages.js'
 import ProjectContent from './ProjectContent.jsx'
+import { hasProjectDetails } from './projectContent/projectContentUtils.js'
 
 const Slide = ({
   pc,
@@ -10,6 +11,9 @@ const Slide = ({
   url,
   title,
   shortDescription,
+  type,
+  techStack,
+  details,
   date,
   category,
   background,
@@ -19,7 +23,8 @@ const Slide = ({
   // Only the backgroundImage is dynamic — size/position live in SCSS (.project-header)
   const bgStyle = background ? { backgroundImage: `url(${projectImages[background]})` } : undefined
 
-  const hasDetailContent = Boolean(pc?.length || mobile?.length || customContent)
+  const hasDetails = hasProjectDetails(details)
+  const hasDetailContent = Boolean(pc?.length || mobile?.length || customContent || hasDetails)
 
   // Ref for the image/scroll container
   const imgRef = useRef(null)
@@ -82,6 +87,9 @@ const Slide = ({
           pc={pc || []}
           mobile={mobile || []}
           customContent={customContent}
+          type={type}
+          techStack={techStack || []}
+          details={details}
           active={isOpen}
         />
       </div>

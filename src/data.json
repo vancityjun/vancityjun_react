@@ -1,37 +1,180 @@
 {
+  "_maintenanceNotes": {
+    "legacyFields": "pc, mobile, hide, and RecSee-only customContent are still used by the current React components. shortDescription is used by the slide hero. description is not rendered and can be removed after useful text is migrated into details.summary."
+  },
   "projects": [
     {
-      "title": "BsideU",
-      "category": "Web App Development",
+      "title": "BSideU",
+      "category": "Full Stack Web App Development",
+      "type": "Side Project Collaboration Platform",
       "background": "",
       "date": "April 2026",
-      "shortDescription": "web based",
+      "shortDescription": "A full-stack collaboration platform for discovering side projects, recruiting teammates, and managing project activity.",
       "url": "https://app.bsideu.ca/",
-      "description": "",
+      "techStack": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "GraphQL",
+        "URQL",
+        "Jotai",
+        "React Hook Form",
+        "Zod",
+        "NativeWind",
+        "NestJS",
+        "PostgreSQL",
+        "AWS S3"
+      ],
       "pc": [],
       "mobile": [],
-      "hide": true
+      "hide": false,
+      "details": {
+        "summary": "BSideU is a full-stack side-project collaboration platform where users can discover project ideas, recruit developers, designers, and project managers, save projects, like posts, comment on discussions, and manage their own project postings. The frontend delivers a responsive Expo web experience connected to a GraphQL backend with authenticated and guest browsing, OAuth-based sessions, project filtering, recommendation data, profile management, and media upload support.",
+        "role": {
+          "title": "Full Stack Development",
+          "description": "I implemented both the GraphQL backend and the Expo/React Native frontend. On the frontend, I built the project discovery interface, responsive project cards, search and filter flows, multi-step project posting and editing forms, project detail pages, comments, likes, account management, authenticated route handling, and GraphQL data integration. On the backend, I built the NestJS API, authentication, OAuth flows, project CRUD, comments, likes, S3 presigned uploads, validation, query optimization, and tests."
+        },
+        "features": [
+          {
+            "label": "Project Discovery",
+            "title": "Searchable and filterable project listing",
+            "description": "Built a responsive project browsing experience with keyword search, pagination, recruiting status, position, location, and interest filters. Logged-in users also see personalized recommendation sections while guests can still browse public project data."
+          },
+          {
+            "label": "Project Cards",
+            "title": "Scannable recruiting information",
+            "description": "Designed project cards that summarize industry, timezone, collaboration type, open roles, deadline status, author profile, views, comments, and likes in a compact layout that works across desktop and mobile widths."
+          },
+          {
+            "label": "Project Posting",
+            "title": "Multi-step project creation and editing",
+            "description": "Implemented a four-step form for industry, dates, recruiting roles, collaboration details, title, description, and contact confirmation. React Hook Form and Zod validation keep text-heavy project requirements reliable before submission."
+          },
+          {
+            "label": "Project Detail",
+            "title": "Project detail, ownership, and sharing flows",
+            "description": "Built the detail screen with author metadata, formatted project dates, project content sections, role information cards, likes, comments, sharing, edit access, and owner-only project deletion through the backend hide-project mutation."
+          },
+          {
+            "label": "Engagement",
+            "title": "Likes and comment discussions",
+            "description": "Connected like and comment interactions to GraphQL mutations and queries, including optimistic UI updates, rollback behavior on failed likes, comment refetching, and immediate local removal for deleted comments."
+          },
+          {
+            "label": "Account",
+            "title": "Saved projects and profile management",
+            "description": "Created my-page flows for saved projects, created projects, and account settings. Users can update profile fields such as name, position, experience, interests, and profile image data through GraphQL mutations."
+          },
+          {
+            "label": "Backend API",
+            "title": "GraphQL API for collaboration workflows",
+            "description": "Built the NestJS backend with GraphQL resolvers, TypeORM repositories, PostgreSQL persistence, OAuth login, JWT sessions, project filtering, recommendations, comments, likes, S3 presigned uploads, email workflows, and DataLoader-based query optimization."
+          },
+          {
+            "label": "Responsive Experience",
+            "title": "Expo web interface for desktop and mobile",
+            "description": "Used Expo Router, React Native Web, NativeWind, reusable page containers, responsive utility classes, accessible labels, and shared UI components to support the same product flows across desktop and mobile web."
+          }
+        ],
+        "challenge": "The main challenge was turning a text-heavy recruiting workflow into a clear product experience while keeping the full-stack data model consistent. The interface needed to make projects easy to scan, support guest and authenticated states, preserve reliable form validation, and stay in sync with GraphQL data for recommendations, filters, likes, comments, saved projects, and account updates.",
+        "process": [
+          "Mapped the main user journeys for browsing, filtering, viewing details, posting projects, editing projects, saving projects, and managing account information.",
+          "Built reusable frontend components such as project cards, section filters, pagination, form steps, dropdowns, modals, avatars, buttons, and shared page containers.",
+          "Connected screens to GraphQL queries and mutations with URQL, Jotai auth state, protected route wrappers, optimistic like behavior, and refetch flows for comments and project updates.",
+          "Translated backend project fields into frontend-friendly layouts for recruiting roles, deadlines, timezone-aware dates, locations, contact information, and project status.",
+          "Implemented backend modules for authentication, OAuth, users, projects, comments, uploads, mail, industries, options, DataLoaders, validation, and unit-tested service behavior.",
+          "Reviewed the responsive Expo web layout across desktop and mobile-oriented widths, keeping dense project information scannable without hiding core actions."
+        ]
+      }
     },
     {
       "title": "Para Siempre",
-      "category": "Web App Development",
-      "background": "",
+      "category": "Full Stack Development",
+      "type": "Serverless Wedding Platform",
       "date": "May 2025",
-      "shortDescription": "Mobile friendly Wedding web invitation",
+      "shortDescription": "A serverless wedding platform with RSVP workflows, admin operations, configurable media permissions, and responsive gallery delivery.",
+      "background": "para-siempre/para-siempre-background.jpg",
       "url": "https://www.para-siempre.love/",
-      "description": "Supporting gallary users to updoad their wedding photos, and download and RRSP",
-      "pc": [],
-      "mobile": [],
-      "hide": true
+      "techStack": [
+        "React",
+        "Vite",
+        "JavaScript",
+        "Sass",
+        "Firebase Auth",
+        "Firestore",
+        "Firebase Cloud Functions",
+        "Firebase Storage",
+        "Mailgun",
+        "SWR",
+        "Sharp",
+        "Vercel"
+      ],
+      "hide": false,
+      "details": {
+        "summary": "Para Siempre is a serverless wedding platform built to centralize event information, RSVP collection, guest communication, and post-event media sharing. Guests can review wedding details, browse the timeline, submit RSVP information, answer conditional questionnaire prompts, and upload photos or videos. The platform also includes a protected admin experience for reviewing RSVP records, tracking attendance, managing gallery permissions, and sending follow-up emails, backed by Firebase Cloud Functions, Firestore, Storage, and responsive image processing.",
+        "role": {
+          "title": "Frontend-Led Full Stack Engineer",
+          "description": "I designed and built the React guest experience, authenticated admin dashboard, Firebase data flows, Cloud Functions, Storage upload pipeline, responsive media delivery, and Mailgun email automation."
+        },
+        "features": [
+          {
+            "label": "RSVP System",
+            "title": "Structured RSVP and conditional guest flow",
+            "description": "Built a custom RSVP flow that captures guest identity, email validation, guest count, and conditional questionnaire responses such as travel origin, transportation needs, and contact information. The flow stores submissions through Firebase callable functions, supports updates to existing records, and avoids duplicate RSVP submissions by email."
+          },
+          {
+            "label": "Admin Dashboard",
+            "title": "Operations Dashboard for Guest and Gallery Management",
+            "description": "Expanded the authenticated admin dashboard into an operations surface with RSVP records, attendance metrics, confirmation tracking, inline questionnaire review, check-in controls, and gallery policy management. Admins can monitor guest counts, mark arrivals, send confirmation emails, trigger follow-up campaigns, and change gallery upload and save settings without touching backend code.",
+            "imagePosition": "right",
+            "images": ["para-siempre/para-siempre-admin-desktop.png"]
+          },
+          {
+            "label": "Media Sharing",
+            "title": "Controlled Guest Upload Pipeline",
+            "description": "Built a media upload workflow with local previews, duplicate-file filtering, removable selections, and signed Firebase Storage uploads. The backend supports configurable upload permissions, allowing uploads to remain public or be restricted to checked-in attendees."
+          },
+          {
+            "label": "Gallery Experience",
+            "title": "Responsive Media Gallery Delivery",
+            "description": "Upgraded the gallery to return thumbnails and responsive srcSet metadata for uploaded images, reducing heavy full-size image loading on the main grid. Cloud Functions generate WebP variants on upload and support backfilling older media, while the frontend preserves fullscreen browsing and admin delete controls."
+          },
+          {
+            "label": "Media Governance",
+            "title": "Configurable Gallery Access Controls",
+            "description": "Implemented admin-managed media policies for upload eligibility and browser save behavior. This added a lightweight content-governance layer to the gallery without introducing a separate custom server."
+          },
+          {
+            "label": "Event Information",
+            "title": "Mobile-Friendly Event Details",
+            "description": "Designed responsive event sections for date, location, embedded Google Maps, mobile map app handoff, and ceremony timeline content so guests could quickly access essential information before and during the event."
+          },
+          {
+            "label": "Email Automation",
+            "title": "Transactional Guest Communication",
+            "description": "Integrated Mailgun with Firebase Cloud Functions to send RSVP confirmations, reminders, and post-event follow-up emails. Email templates include personalized guest details, event information, questionnaire answers, and media upload links."
+          }
+        ],
+        "challenge": "The main challenge was evolving a personal event site into a lightweight operations platform without adding traditional server infrastructure. The product needed to remain simple for guests on mobile while supporting admin workflows such as RSVP tracking, check-in state, follow-up communication, media moderation, configurable upload permissions, and efficient gallery delivery.",
+        "process": [
+          "Mapped the guest journey into separate flows for event discovery, RSVP submission, confirmation, gallery browsing, and media upload.",
+          "Used reusable React components for form fields, buttons, dropdowns, questionnaire steps, media cards, modal viewing, and admin panels to keep the UI consistent across public and admin pages.",
+          "Modeled backend behavior with Firebase callable functions so RSVP writes, email actions, media listing, upload permissions, gallery settings, and protected deletes could be handled securely outside the client.",
+          "Implemented Firebase Auth and protected routes for admin-only access while keeping the public guest experience frictionless.",
+          "Used Firestore as the RSVP source of truth and Firebase Storage as the media layer, with callable Cloud Functions enforcing upload rules, admin mutations, and gallery settings.",
+          "Added responsive image generation and metadata-driven gallery delivery to improve performance for photo-heavy views while keeping the implementation fully serverless."
+        ]
+      }
     },
     {
-      "title": "furence",
+      "title": "Furence",
       "category": "UI Design & Development",
+      "type": "Company Website",
       "background": "furence/furence.png",
       "date": "August 2018",
       "shortDescription": "company website",
       "url": "http://www.furence.com/",
-      "description": "This website has been renovated with Codeignitor framework.",
+      "techStack": ["React", "JavaScript", "Python", "Flask", "PostgreSQL"],
       "pc": ["furence/furence1600all.png"],
       "mobile": [
         "furence/furence-mobile-1.png",
@@ -40,48 +183,144 @@
         "furence/furence-mobile-4.png",
         "furence/furence-mobile-5.png",
         "furence/furence-mobile-6.png"
-      ]
+      ],
+      "details": {
+        "summary": "Furence is a company website designed to present company information, job postings, news, and office updates in a clear and accessible format.",
+        "role": {
+          "title": "UI Design & Development",
+          "description": "I was responsible for the visual design and the technical build of the user interface. My work involved creating a clean layout that organizes dense data into a readable format and turning wireframes into functional code."
+        },
+        "features": [
+          {
+            "label": "Main Feature",
+            "title": "Job posting system",
+            "description": "A structured area for sharing hiring information and open roles."
+          },
+          {
+            "label": "Main Feature",
+            "title": "Centralized notice system",
+            "description": "A structured news feed that allows the company to share office updates, technical documentation, and event announcements."
+          },
+          {
+            "label": "Responsive Design",
+            "title": "Mobile-friendly access to key content",
+            "description": "The interface is built to adapt to any screen size, making it easy for staff to check information on large office monitors or mobile phones.",
+            "imagePosition": "right",
+            "images": ["furence/furence-mobile-1.png", "furence/furence-mobile-2.png"]
+          },
+          {
+            "label": "Desktop Experience",
+            "title": "Readable company website structure",
+            "description": "The desktop layout organizes company information, news, and service content into a clear page structure.",
+            "image": "furence/furence1600all.png"
+          }
+        ],
+        "challenge": "The main challenge was organizing company updates, job information, and technical content without making the interface feel crowded.",
+        "process": [
+          "Reviewed existing company content and grouped it by user intent.",
+          "Designed layouts that made news, jobs, and company information easier to scan.",
+          "Built responsive UI components and tested desktop and mobile layouts."
+        ]
+      }
     },
     {
-      "title": "perry & sherry",
+      "title": "Perry & Sherry",
       "category": "Web Design & Development",
+      "type": "Wedding RSVP Website",
       "background": "perry-sherry/perrysherry.png",
       "date": "August 2019",
       "shortDescription": "Wedding RSVP website made with React.js",
       "url": "https://perrysherry.netlify.com/",
-      "description": "",
+      "techStack": ["React", "JavaScript", "Netlify"],
       "pc": [
         "perry-sherry/perry-sherry-ourstory.png",
         "perry-sherry/perry-sherry-location.png",
         "perry-sherry/perry-sherry-rsvp.png"
       ],
       "mobile": [],
-      "hide": true
+      "hide": true,
+      "details": {
+        "summary": "Perry & Sherry is a wedding RSVP website that presents the couple's story, event location, and guest response flow in one web experience.",
+        "role": {
+          "title": "Web Design & Development",
+          "description": "I designed and developed the wedding website, translating event information into a responsive and personal web experience."
+        },
+        "features": [
+          {
+            "label": "Story",
+            "title": "Couple story section",
+            "description": "A dedicated story page introduces the couple and sets the tone for the wedding invitation.",
+            "image": "perry-sherry/perry-sherry-ourstory.png"
+          },
+          {
+            "label": "Location",
+            "title": "Event location details",
+            "description": "The location section gives guests quick access to venue details and travel context.",
+            "imagePosition": "right",
+            "image": "perry-sherry/perry-sherry-location.png"
+          },
+          {
+            "label": "RSVP",
+            "title": "Guest response form",
+            "description": "The RSVP screen helps guests send their response through the website.",
+            "image": "perry-sherry/perry-sherry-rsvp.png"
+          }
+        ],
+        "challenge": "The main challenge was balancing personal storytelling with practical event information in a layout guests could scan quickly.",
+        "process": [
+          "Organized content around the main guest needs: story, location, and RSVP.",
+          "Designed pages with a consistent visual tone for the wedding.",
+          "Built the website as a responsive React experience and deployed it for guest access."
+        ]
+      }
     },
     {
       "title": "After Party",
       "category": "Web Design & Development",
+      "type": "Mobile Landing Page",
       "background": "after-party/after-party-3.png",
       "date": "February 2020",
-      "shortDescription": "After party ticket mobile landing page -UNDEFINEDteam project",
+      "shortDescription": "After party ticket mobile landing page",
       "url": "https://jjent.netlify.com/",
-      "description": "",
-      "pc": [],
-      "mobile": [
-        "after-party/jjent-1.png",
-        "after-party/jjent-2.png",
-        "after-party/jjent-3.png",
-        "after-party/jjent-4.png"
-      ]
+      "techStack": ["React", "JavaScript", "Netlify"],
+      "details": {
+        "summary": "After Party is a mobile landing page concept for promoting an event and guiding users toward ticket-related information.",
+        "role": {
+          "title": "Web Design & Development",
+          "description": "I contributed to the mobile web interface and helped shape the visual presentation for the event landing experience."
+        },
+        "features": [
+          {
+            "label": "Mobile Experience",
+            "title": "Phone-first event landing flow",
+            "description": "The experience is designed around mobile browsing, with compact sections that support quick event discovery.",
+            "images": ["after-party/jjent-1.png", "after-party/jjent-2.png"]
+          },
+          {
+            "label": "Event Content",
+            "title": "Ticket-focused presentation",
+            "description": "The landing page presents event information in a direct sequence so users can understand the offer quickly.",
+            "imagePosition": "right",
+            "images": ["after-party/jjent-3.png", "after-party/jjent-4.png"]
+          }
+        ],
+        "challenge": "The main challenge was making an event landing page feel energetic while keeping the mobile flow simple.",
+        "process": [
+          "Planned the landing page around mobile event discovery.",
+          "Designed compact screen sections for event information.",
+          "Built the mobile layout and tested the flow across phone viewport sizes."
+        ]
+      }
     },
     {
       "title": "ITSM",
       "category": "Application Design & Development ",
+      "type": "Dashboard Application",
       "background": "itsm/itsm.png",
       "date": "December 2018",
       "shortDescription": "Dashboard Application",
       "url": "https://vancityjun.github.io/itsm/",
-      "description": "",
+      "techStack": ["React", "JavaScript"],
       "pc": [
         "itsm/itsm-login.png",
         "itsm/dashboard.png",
@@ -91,60 +330,192 @@
         "itsm/itsm-report.png",
         "itsm/itsm-setting.png"
       ],
-      "mobile": []
+      "mobile": [],
+      "details": {
+        "summary": "ITSM is a dashboard application concept for managing service information, tickets, calendar views, reports, and settings.",
+        "role": {
+          "title": "Application Design & Development",
+          "description": "I designed and developed the dashboard interface, focusing on organizing dense application data into clear task-based screens."
+        },
+        "features": [
+          {
+            "label": "Access",
+            "title": "Login and application entry",
+            "description": "The login screen gives the application a focused entry point before users access dashboard tools.",
+            "image": "itsm/itsm-login.png"
+          },
+          {
+            "label": "Dashboard",
+            "title": "Service overview dashboard",
+            "description": "The dashboard presents key application information in a scannable layout for quick review.",
+            "imagePosition": "right",
+            "image": "itsm/dashboard.png"
+          },
+          {
+            "label": "Workflows",
+            "title": "Tickets, calendar, reports, and settings",
+            "description": "Supporting screens organize common IT service tasks into dedicated application areas.",
+            "images": ["itsm/itsm-tickets.png", "itsm/itsm-calendar.png"]
+          }
+        ],
+        "challenge": "The main challenge was organizing multiple application tools while keeping the dashboard readable and consistent.",
+        "process": [
+          "Separated the application into clear functional screens.",
+          "Designed reusable dashboard patterns for dense data.",
+          "Built the interface and checked consistency across the core application views."
+        ]
+      }
     },
     {
       "title": "Landing Page",
       "category": "Web Design & Development",
+      "type": "Company Landing Page",
       "background": "landing-page/furence-landing.png",
       "date": "August 2018",
       "shortDescription": "Company Landing Page",
       "url": "https://furence-landing.netlify.com/",
-      "description": "",
+      "techStack": ["React", "JavaScript", "Netlify"],
       "pc": ["landing-page/furence-landing-pc.png"],
-      "mobile": []
+      "mobile": [],
+      "details": {
+        "summary": "Landing Page is a company landing page focused on presenting the brand, main message, and supporting content in a single long-form page.",
+        "role": {
+          "title": "Web Design & Development",
+          "description": "I designed and developed the landing page layout with a focus on clear hierarchy and a polished desktop presentation."
+        },
+        "features": [
+          {
+            "label": "Landing Experience",
+            "title": "Long-form company page",
+            "description": "The page uses a long-form structure to introduce company messaging and supporting information.",
+            "image": "landing-page/furence-landing-pc.png"
+          },
+          {
+            "label": "Layout",
+            "title": "Consistent visual sections",
+            "description": "The design separates content into clear sections so visitors can move through the page naturally."
+          }
+        ],
+        "challenge": "The main challenge was keeping the single-page experience readable while presenting enough information to support the company message.",
+        "process": [
+          "Structured the page around a clear top-to-bottom content flow.",
+          "Designed visual sections for scanning and pacing.",
+          "Built and deployed the landing page for web access."
+        ]
+      }
     },
     {
       "title": "Sakura Park",
       "category": "3D Character design WebGL",
+      "type": "3D WebGL Project",
       "background": "sakura-park/shiba.png",
       "date": "November 2018",
       "shortDescription": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
       "url": "https://vancityjun.github.io/sakura-town/",
-      "description": "",
+      "techStack": ["Autodesk Maya", "WebGL", "JavaScript"],
       "pc": ["sakura-park/sakura.png"],
       "mobile": [],
-      "customContent": ""
+      "details": {
+        "summary": "Sakura Park is a 3D character and WebGL project combining character modeling, rendering, and an interactive browser-based presentation.",
+        "role": {
+          "title": "3D Character Design & WebGL Development",
+          "description": "I created the 3D character work and built the web presentation so the scene could be viewed in the browser."
+        },
+        "features": [
+          {
+            "label": "3D Design",
+            "title": "Character modeling and rendering",
+            "description": "The project includes 3D character modeling and visual presentation work created for a stylized scene.",
+            "image": "sakura-park/sakura.png"
+          },
+          {
+            "label": "WebGL",
+            "title": "Browser-based 3D presentation",
+            "description": "The final work is presented through a WebGL experience so it can run in a web browser."
+          }
+        ],
+        "challenge": "The main challenge was translating a 3D character concept into a browser-friendly presentation.",
+        "process": [
+          "Modeled and rendered the character assets.",
+          "Prepared the visual scene for web presentation.",
+          "Built the WebGL experience and tested the browser output."
+        ]
+      }
     },
     {
       "title": "RecSee",
       "category": "Motion Graphic",
+      "type": "Motion Graphic",
       "background": "recsee/recsee-video.png",
       "date": "November 2018",
       "shortDescription": "Motion Graphic",
       "url": "",
-      "description": "",
+      "techStack": ["Motion Design"],
       "pc": [],
       "mobile": [],
       "customContent": "recsee",
-      "hide": true
+      "hide": true,
+      "details": {
+        "summary": "RecSee is a motion graphic project presented through a video embed.",
+        "role": {
+          "title": "Motion Graphic Design",
+          "description": "I created the motion graphic presentation and prepared it for web-based viewing."
+        },
+        "features": [
+          {
+            "label": "Video",
+            "title": "Embedded motion graphic",
+            "description": "The project is displayed through the legacy RecSee video embed."
+          }
+        ],
+        "challenge": "The main challenge was communicating the concept clearly through motion and pacing.",
+        "process": [
+          "Planned the motion sequence around the key message.",
+          "Produced the visual motion elements.",
+          "Prepared the final video for web presentation."
+        ]
+      }
     },
     {
-      "title": "Award wining",
+      "title": "Award Winning",
       "category": "Design Projects",
+      "type": "Design Projects",
       "background": "award-winning/award.png",
       "date": "",
       "shortDescription": "",
       "url": "",
-      "description": "",
-      "pc": [
-        "award-winning/insmart.jpg",
-        "award-winning/wwf.jpg",
-        "award-winning/febreze.jpg",
-        "award-winning/natural.jpg"
-      ],
+      "techStack": ["Design", "Concept Development"],
+      "pc": ["award-winning/insmart.jpg", "award-winning/wwf.jpg", "award-winning/febreze.jpg", "award-winning/natural.jpg"],
       "mobile": [],
-      "hide": true
+      "hide": true,
+      "details": {
+        "summary": "Award Winning is a collection of visual design projects focused on concept development, campaign thinking, and polished presentation.",
+        "role": {
+          "title": "Design",
+          "description": "I created visual design concepts and prepared presentation-ready campaign pieces."
+        },
+        "features": [
+          {
+            "label": "Campaign Design",
+            "title": "Concept-driven design work",
+            "description": "The collection shows design concepts across different campaign and visual communication directions.",
+            "images": ["award-winning/insmart.jpg", "award-winning/wwf.jpg"]
+          },
+          {
+            "label": "Presentation",
+            "title": "Finished visual pieces",
+            "description": "The projects are presented as polished design outputs for portfolio review.",
+            "imagePosition": "right",
+            "images": ["award-winning/febreze.jpg", "award-winning/natural.jpg"]
+          }
+        ],
+        "challenge": "The main challenge was turning campaign ideas into visuals that communicate quickly and clearly.",
+        "process": [
+          "Developed visual concepts around each design brief.",
+          "Refined the strongest directions into finished layouts.",
+          "Prepared the work for portfolio presentation."
+        ]
+      }
     }
   ]
 }
