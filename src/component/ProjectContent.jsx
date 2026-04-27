@@ -8,6 +8,7 @@ const ProjectContent = ({
   mobile,
   customContent,
   type,
+  category,
   techStack,
   details,
   active,
@@ -17,7 +18,12 @@ const ProjectContent = ({
 
   return (
     <div className={`project-content cf${active ? ' active' : ''}`}>
-      <ProjectDetail type={type} techStack={techStack} details={details} />
+      <ProjectDetail
+        type={type}
+        category={category}
+        techStack={techStack}
+        details={details}
+      />
       <ProjectGallery
         pc={pc}
         mobile={mobile}

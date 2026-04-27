@@ -20,10 +20,21 @@ const SummaryBlock = ({ label, children }) => {
   )
 }
 
-const ProjectDetailIntro = ({ type, techStack, details }) => {
+const RoleBlock = ({ role }) => {
+  if (!role?.title && !role?.description) return null
+
+  return (
+    <div className="project-detail__summary">
+      <p className="project-detail__label">My Role</p>
+      {role.title && <h3>{role.title}</h3>}
+      {role.description && <p>{role.description}</p>}
+    </div>
+  )
+}
+
+const ProjectDetailIntro = ({ type, category, techStack, details }) => {
   const metaItems = [
-    { label: 'Type', value: type },
-    { label: 'Role', value: details.role?.title },
+    { label: 'Category', value: category || type },
     { label: 'Tech Stack', value: techStack?.join(', ') },
   ].filter((item) => item.value)
 
@@ -36,8 +47,10 @@ const ProjectDetailIntro = ({ type, techStack, details }) => {
           ))}
         </div>
       )}
-      <SummaryBlock label="Project Summary">{details.summary}</SummaryBlock>
-      <SummaryBlock label="My Role">{details.role?.description}</SummaryBlock>
+      <div className="project-detail__overview">
+        <SummaryBlock label="Project Summary">{details.summary}</SummaryBlock>
+        <RoleBlock role={details.role} />
+      </div>
     </section>
   )
 }

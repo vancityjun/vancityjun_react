@@ -4,14 +4,19 @@ import ProjectNotes from './ProjectNotes.jsx'
 import ProjectTextFeatures from './ProjectTextFeatures.jsx'
 import { splitFeaturesByMedia } from './projectContentUtils.js'
 
-const ProjectDetail = ({ type, techStack, details }) => {
+const ProjectDetail = ({ type, category, techStack, details }) => {
   if (!details) return null
 
   const { mediaFeatures, textFeatures } = splitFeaturesByMedia(details.features)
 
   return (
     <div className="project-detail">
-      <ProjectDetailIntro type={type} techStack={techStack} details={details} />
+      <ProjectDetailIntro
+        type={type}
+        category={category}
+        techStack={techStack}
+        details={details}
+      />
 
       {mediaFeatures.map((feature) => (
         <ProjectFeatureRow

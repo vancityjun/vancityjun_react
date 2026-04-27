@@ -2,6 +2,8 @@
 
 .blog-slider__item.swiper-slide-active {
   .project-content {
+    font-family: $main-font;
+
     .project-detail,
     .project-gallery {
       width: min(90%, 1200px);
@@ -11,19 +13,19 @@
     .project-detail {
       display: flex;
       flex-direction: column;
-      gap: 90px;
-      padding-bottom: 90px;
+      gap: 110px;
+      padding-bottom: 86px;
 
       @media screen and (max-width: 576px) {
         width: 90%;
-        gap: 56px;
+        gap: 52px;
         padding-bottom: 56px;
       }
     }
 
     .project-detail__intro {
       display: grid;
-      grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1fr);
+      grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1fr);
       gap: 56px;
       align-items: start;
 
@@ -35,17 +37,20 @@
 
     .project-detail__meta {
       display: grid;
-      gap: 18px;
+      gap: 0;
 
       div {
-        border-top: 1px solid rgba(24, 35, 56, 0.18);
-        padding-top: 14px;
+        padding: 0 0 22px;
+
+        & + div {
+          padding-top: 6px;
+        }
       }
 
       span {
         color: $light-gray;
         display: block;
-        font-size: 14px;
+        font-size: 13px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
@@ -53,37 +58,52 @@
       strong {
         color: $secondary-color;
         display: block;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 19px;
+        font-weight: 600;
         line-height: 1.45;
-        margin-top: 4px;
+        margin-top: 6px;
       }
+    }
+
+    .project-detail__overview {
+      display: grid;
+      gap: 34px;
     }
 
     .project-detail__summary {
       color: $dark-gray;
-      font-size: 24px;
-      line-height: 1.55;
-
-      & + .project-detail__summary {
-        margin-top: 32px;
-      }
 
       p {
         margin: 0;
       }
 
+      h3 {
+        color: $secondary-color;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.25;
+        margin: 0 0 8px;
+      }
+
+      p:not(.project-detail__label) {
+        font-size: 24px;
+        line-height: 1.55;
+      }
+
       @media screen and (max-width: 576px) {
-        font-size: 20px;
+        p:not(.project-detail__label) {
+          font-size: 20px;
+        }
       }
     }
 
     .project-detail__label {
       color: $light-gray;
       font-size: 14px;
-      letter-spacing: 0.12em;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       line-height: 1.4;
-      margin: 0 0 14px;
+      margin: 0 0 12px;
       text-transform: uppercase;
     }
 
@@ -148,15 +168,14 @@
 
       h3 {
         color: $secondary-color;
-        font-family: $secondary-font;
-        font-size: 44px;
-        font-weight: 300;
-        line-height: 1.05;
-        margin: 0 0 20px;
-        text-transform: capitalize;
+        font-family: $main-font;
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 1.12;
+        margin: 0 0 18px;
 
         @media screen and (max-width: 576px) {
-          font-size: 36px;
+          font-size: 32px;
         }
       }
 
@@ -169,14 +188,21 @@
 
     .project-detail__text-features,
     .project-detail__notes {
-      border-top: 1px solid rgba(24, 35, 56, 0.16);
-      padding-top: 34px;
+      padding-top: 6px;
+    }
+
+    .project-detail__section-heading {
+      margin-bottom: 24px;
+
+      .project-detail__label {
+        margin-bottom: 0;
+      }
     }
 
     .project-detail__feature-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
+      gap: 30px 44px;
 
       @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -197,8 +223,8 @@
 
       h3 {
         color: $secondary-color;
-        font-size: 24px;
-        font-weight: 500;
+        font-size: 25px;
+        font-weight: 600;
         line-height: 1.2;
         margin: 0 0 10px;
       }
@@ -213,7 +239,7 @@
     .project-detail__notes {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 48px;
+      gap: 36px;
       color: $dark-gray;
 
       p:not(.project-detail__label),

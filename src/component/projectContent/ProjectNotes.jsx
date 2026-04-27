@@ -4,13 +4,13 @@ const ProjectNotes = ({ challenge, process }) => {
   return (
     <section className="project-detail__notes">
       {challenge && (
-        <div>
+        <div className="project-detail__note">
           <p className="project-detail__label">The Challenge</p>
           <p>{challenge}</p>
         </div>
       )}
       {process?.length > 0 && (
-        <div>
+        <div className="project-detail__note">
           <p className="project-detail__label">Development Process</p>
           <ol>
             {process.map((step) => (

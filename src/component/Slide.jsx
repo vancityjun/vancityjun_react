@@ -88,6 +88,7 @@ const Slide = ({
           mobile={mobile || []}
           customContent={customContent}
           type={type}
+          category={category}
           techStack={techStack || []}
           details={details}
           active={isOpen}
@@ -97,7 +98,7 @@ const Slide = ({
         <div className="blog-slider__content cf">
           <span className="blog-slider__code">{date}</span>
           <div className="blog-slider__title">{title}</div>
-          <div className="blog-slider__text">{category}</div>
+          <div className="blog-slider__text">{type || category}</div>
           {hasDetailContent && (
             <p className="blog-slider__button">
               <button type="button" onClick={onOpen}>

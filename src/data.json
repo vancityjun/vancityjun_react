@@ -138,6 +138,7 @@
             "label": "Gallery Experience",
             "title": "Responsive Media Gallery Delivery",
             "description": "Upgraded the gallery to return thumbnails and responsive srcSet metadata for uploaded images, reducing heavy full-size image loading on the main grid. Cloud Functions generate WebP variants on upload and support backfilling older media, while the frontend preserves fullscreen browsing and admin delete controls."
+            "description": "Upgraded the gallery to return thumbnails and responsive srcSet metadata for uploaded images, reducing heavy full-size image loading on the main grid. Cloud Functions generate WebP variants on upload and support backfilling older media, while the frontend preserves fullscreen browsing and admin delete controls."
           },
           {
             "label": "Media Governance",
