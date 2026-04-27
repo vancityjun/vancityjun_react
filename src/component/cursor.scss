@@ -45,9 +45,10 @@ html {
 
 .cursor2 {
   border: 1px solid white;
-  height: 30px;
-  width: 30px;
+  height: 26px;
+  width: 26px;
   z-index: 9998;
+  transform-origin: center;
   -webkit-transition: transform 0.3s ease-out;
   -moz-transition: transform 0.3s ease-out;
   -o-transition: transform 0.3s ease-out;
@@ -55,11 +56,11 @@ html {
   transition: transform 0.3s ease-out;
   mix-blend-mode: difference;
   &.hover {
-    -webkit-transform: scale(2.5) translateX(-25%) translateY(-25%);
-    -moz-transform: scale(2.5) translateX(-25%) translateY(-25%);
-    -ms-transform: scale(2.5) translateX(-25%) translateY(-25%);
-    -o-transform: scale(2.5) translateX(-25%) translateY(-25%);
-    transform: scale(2.5) translateX(-25%) translateY(-25%);
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(2);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(2);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(2);
+    -o-transform: translateX(-50%) translateY(-50%) scale(2);
+    transform: translateX(-50%) translateY(-50%) scale(2);
     background: white;
     border: none;
   }
