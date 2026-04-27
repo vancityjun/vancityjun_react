@@ -1,10 +1,10 @@
+import logo from '../img/logo3.png';
+
 const Topbar = ({ menuOpen, slideOpen, onMenuToggle, onClose }) => {
   return (
     <div className="top_bar">
       <a href="/" className="logo">
-        <h1>
-          <span>V</span>ancity <span>J</span>un
-        </h1>
+        <img src={logo} alt="Vancity Jun" />
       </a>
       {slideOpen && (
         <button
@@ -26,7 +26,7 @@ const Topbar = ({ menuOpen, slideOpen, onMenuToggle, onClose }) => {
         <span></span>
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;
