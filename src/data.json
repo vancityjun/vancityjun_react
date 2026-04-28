@@ -27,33 +27,33 @@
     {
       "title": "furence",
       "category": "UI Design & Development",
-      "background": "furence.png",
+      "background": "furence/furence.png",
       "date": "August 2018",
       "shortDescription": "company website",
       "url": "http://www.furence.com/",
       "description": "This website has been renovated with Codeignitor framework.",
-      "pc": ["furence1600all.png"],
+      "pc": ["furence/furence1600all.png"],
       "mobile": [
-        "furence-mobile-1.png",
-        "furence-mobile-2.png",
-        "furence-mobile-3.png",
-        "furence-mobile-4.png",
-        "furence-mobile-5.png",
-        "furence-mobile-6.png"
+        "furence/furence-mobile-1.png",
+        "furence/furence-mobile-2.png",
+        "furence/furence-mobile-3.png",
+        "furence/furence-mobile-4.png",
+        "furence/furence-mobile-5.png",
+        "furence/furence-mobile-6.png"
       ]
     },
     {
       "title": "perry & sherry",
       "category": "Web Design & Development",
-      "background": "perrysherry.png",
+      "background": "perry-sherry/perrysherry.png",
       "date": "August 2019",
       "shortDescription": "Wedding RSVP website made with React.js",
       "url": "https://perrysherry.netlify.com/",
       "description": "",
       "pc": [
-        "perry-sherry-ourstory.png",
-        "perry-sherry-location.png",
-        "perry-sherry-rsvp.png"
+        "perry-sherry/perry-sherry-ourstory.png",
+        "perry-sherry/perry-sherry-location.png",
+        "perry-sherry/perry-sherry-rsvp.png"
       ],
       "mobile": [],
       "hide": true
@@ -61,60 +61,65 @@
     {
       "title": "After Party",
       "category": "Web Design & Development",
-      "background": "after-party-3.png",
+      "background": "after-party/after-party-3.png",
       "date": "February 2020",
       "shortDescription": "After party ticket mobile landing page -UNDEFINEDteam project",
       "url": "https://jjent.netlify.com/",
       "description": "",
       "pc": [],
-      "mobile": ["jjent-1.png", "jjent-2.png", "jjent-3.png", "jjent-4.png"]
+      "mobile": [
+        "after-party/jjent-1.png",
+        "after-party/jjent-2.png",
+        "after-party/jjent-3.png",
+        "after-party/jjent-4.png"
+      ]
     },
     {
       "title": "ITSM",
       "category": "Application Design & Development ",
-      "background": "itsm.png",
+      "background": "itsm/itsm.png",
       "date": "December 2018",
       "shortDescription": "Dashboard Application",
       "url": "https://vancityjun.github.io/itsm/",
       "description": "",
       "pc": [
-        "itsm-login.png",
-        "dashboard.png",
-        "itsm-calender.png",
-        "itsm-tickets.png",
-        "itsm-solution.png",
-        "itsm-report.png",
-        "itsm-setting.png"
+        "itsm/itsm-login.png",
+        "itsm/dashboard.png",
+        "itsm/itsm-calendar.png",
+        "itsm/itsm-tickets.png",
+        "itsm/itsm-solution.png",
+        "itsm/itsm-report.png",
+        "itsm/itsm-setting.png"
       ],
       "mobile": []
     },
     {
       "title": "Landing Page",
       "category": "Web Design & Development",
-      "background": "furence-landing.png",
+      "background": "landing-page/furence-landing.png",
       "date": "August 2018",
       "shortDescription": "Company Landing Page",
       "url": "https://furence-landing.netlify.com/",
       "description": "",
-      "pc": ["furence-landing-pc.png"],
+      "pc": ["landing-page/furence-landing-pc.png"],
       "mobile": []
     },
     {
       "title": "Sakura Park",
       "category": "3D Character design WebGL",
-      "background": "shiba.png",
+      "background": "sakura-park/shiba.png",
       "date": "November 2018",
       "shortDescription": "3D Character design modeling & rendering with Autodesk 3DMaya WebGL",
       "url": "https://vancityjun.github.io/sakura-town/",
       "description": "",
-      "pc": ["sakura.png"],
+      "pc": ["sakura-park/sakura.png"],
       "mobile": [],
       "customContent": ""
     },
     {
       "title": "RecSee",
       "category": "Motion Graphic",
-      "background": "recsee-video.png",
+      "background": "recsee/recsee-video.png",
       "date": "November 2018",
       "shortDescription": "Motion Graphic",
       "url": "",
@@ -127,12 +132,17 @@
     {
       "title": "Award wining",
       "category": "Design Projects",
-      "background": "award.png",
+      "background": "award-winning/award.png",
       "date": "",
       "shortDescription": "",
       "url": "",
       "description": "",
-      "pc": ["insmart.jpg", "wwf.jpg", "febreze.jpg", "natural.jpg"],
+      "pc": [
+        "award-winning/insmart.jpg",
+        "award-winning/wwf.jpg",
+        "award-winning/febreze.jpg",
+        "award-winning/natural.jpg"
+      ],
       "mobile": [],
       "hide": true
     }
