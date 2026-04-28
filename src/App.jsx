@@ -167,6 +167,9 @@ const App = () => {
       background={project.background}
       date={project.date}
       shortDescription={project.shortDescription}
+      type={project.type}
+      techStack={project.techStack || []}
+      details={project.details}
       url={project.url}
       pc={project.pc || []}
       mobile={project.mobile || []}
