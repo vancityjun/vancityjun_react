@@ -7,7 +7,7 @@ const modules = import.meta.glob('../img/**/*.{png,jpg,jpeg,svg}', {
 
 const projectImages = {}
 for (const path in modules) {
-  const relativePath = path.replace('../img/', '')
+  const relativePath = path.replace(/^\.\.\/img\//, '')
   projectImages[relativePath] = modules[path]
 }
 
