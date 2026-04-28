@@ -46,7 +46,8 @@ export const getProjectEmbed = (customContent) =>
 export const hasProjectDetails = (details) =>
   Boolean(
     details?.summary ||
-    details?.role ||
+    details?.role?.title ||
+    details?.role?.description ||
     details?.features?.length ||
     details?.challenge ||
     details?.process?.length
