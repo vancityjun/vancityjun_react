@@ -3,9 +3,6 @@ const ProjectTextFeatures = ({ features }) => {
 
   return (
     <section className="project-detail__text-features">
-      <div className="project-detail__section-heading">
-        <p className="project-detail__label">Main Functionalities</p>
-      </div>
       <div className="project-detail__feature-list">
         {features.map((feature) => (
           <article

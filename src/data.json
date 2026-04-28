@@ -7,7 +7,7 @@
       "title": "BSideU",
       "category": "Full Stack Web App Development",
       "type": "Side Project Collaboration Platform",
-      "background": "",
+      "background": "bsideu/bsideu.png",
       "date": "April 2026",
       "shortDescription": "A full-stack collaboration platform for discovering side projects, recruiting teammates, and managing project activity.",
       "url": "https://app.bsideu.ca/",
@@ -38,12 +38,15 @@
           {
             "label": "Project Discovery",
             "title": "Searchable and filterable project listing",
-            "description": "Built a responsive project browsing experience with keyword search, pagination, recruiting status, position, location, and interest filters. Logged-in users also see personalized recommendation sections while guests can still browse public project data."
+            "description": "Built a responsive project browsing experience with keyword search, pagination, recruiting status, position, location, and interest filters. Logged-in users also see personalized recommendation sections while guests can still browse public project data.",
+            "images": ["bsideu/bsideu-project-filter.jpg"]
           },
           {
             "label": "Project Cards",
             "title": "Scannable recruiting information",
-            "description": "Designed project cards that summarize industry, timezone, collaboration type, open roles, deadline status, author profile, views, comments, and likes in a compact layout that works across desktop and mobile widths."
+            "description": "Designed project cards that summarize industry, timezone, collaboration type, open roles, deadline status, author profile, views, comments, and likes in a compact layout that works across desktop and mobile widths.",
+            "imagePosition": "right",
+            "images": ["bsideu/bsideu-project-card.png"]
           },
           {
             "label": "Project Posting",
@@ -151,7 +154,8 @@
           {
             "label": "Event Information",
             "title": "Mobile-Friendly Event Details",
-            "description": "Designed responsive event sections for date, location, embedded Google Maps, mobile map app handoff, and ceremony timeline content so guests could quickly access essential information before and during the event."
+            "description": "Designed responsive event sections for date, location, embedded Google Maps, mobile map app handoff, and ceremony timeline content so guests could quickly access essential information before and during the event.",
+            "images": ["para-siempre/para-siempre-event-details.png"]
           },
           {
             "label": "Email Automation",
