@@ -120,7 +120,8 @@
           {
             "label": "RSVP System",
             "title": "Structured RSVP and conditional guest flow",
-            "description": "Built a custom RSVP flow that captures guest identity, email validation, guest count, and conditional questionnaire responses such as travel origin, transportation needs, and contact information. The flow stores submissions through Firebase callable functions, supports updates to existing records, and avoids duplicate RSVP submissions by email."
+            "description": "Built a custom RSVP flow that captures guest identity, email validation, guest count, and conditional questionnaire responses such as travel origin, transportation needs, and contact information. The flow stores submissions through Firebase callable functions, supports updates to existing records, and avoids duplicate RSVP submissions by email.",
+            "images": ["para-siempre/para-siempre-rsvp.png"]
           },
           {
             "label": "Admin Dashboard",
@@ -132,12 +133,15 @@
           {
             "label": "Media Sharing",
             "title": "Controlled Guest Upload Pipeline",
-            "description": "Built a media upload workflow with local previews, duplicate-file filtering, removable selections, and signed Firebase Storage uploads. The backend supports configurable upload permissions, allowing uploads to remain public or be restricted to checked-in attendees."
+            "description": "Built a media upload workflow with local previews, duplicate-file filtering, removable selections, and signed Firebase Storage uploads. The backend supports configurable upload permissions, allowing uploads to remain public or be restricted to checked-in attendees.",
+            "images": ["para-siempre/para-siempre-image-upload.png"]
           },
           {
             "label": "Gallery Experience",
             "title": "Responsive Media Gallery Delivery",
-            "description": "Upgraded the gallery to return thumbnails and responsive srcSet metadata for uploaded images, reducing heavy full-size image loading on the main grid. Cloud Functions generate WebP variants on upload and support backfilling older media, while the frontend preserves fullscreen browsing and admin delete controls."
+            "description": "Upgraded the gallery to return thumbnails and responsive srcSet metadata for uploaded images, reducing heavy full-size image loading on the main grid. Cloud Functions generate WebP variants on upload and support backfilling older media, while the frontend preserves fullscreen browsing and admin delete controls.",
+            "imagePosition": "right",
+            "images": ["para-siempre/para-siempre-gallery.png"]
           },
           {
             "label": "Media Governance",
