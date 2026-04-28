@@ -284,6 +284,7 @@
     },
     {
       "title": "After Party",
+      "hide": true,
       "category": "Web Design & Development",
       "type": "Mobile Landing Page",
       "background": "after-party/after-party-3.png",
@@ -322,6 +323,7 @@
     },
     {
       "title": "ITSM",
+      "hide": true,
       "category": "Application Design & Development ",
       "type": "Dashboard Application",
       "background": "itsm/itsm.png",
@@ -376,6 +378,7 @@
     },
     {
       "title": "Landing Page",
+      "hide": true,
       "category": "Web Design & Development",
       "type": "Company Landing Page",
       "background": "landing-page/furence-landing.png",
