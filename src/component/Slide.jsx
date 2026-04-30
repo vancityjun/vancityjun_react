@@ -54,6 +54,19 @@ const Slide = ({
     return () => el.removeEventListener('wheel', onWheel)
   }, [isOpen])
 
+  const handleScrollToDetails = () => {
+    const container = imgRef.current
+    if (!container) return
+
+    const detailContent = container.querySelector('.project-content')
+    if (!detailContent) return
+
+    container.scrollTo({
+      top: detailContent.offsetTop,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <div
       className={`blog-slider__item swiper-slide project${id}`}
@@ -77,9 +90,15 @@ const Slide = ({
             </a>
           )}
           {hasDetailContent && isOpen && (
-            <span className="scrollDown" aria-hidden="true">
-              <span></span>
-            </span>
+            <button
+              type="button"
+              className="scrollDown"
+              onClick={handleScrollToDetails}
+              aria-label={`Scroll to ${title} case study details`}
+            >
+              <span className="scrollDown__label">Scroll to case study</span>
+              <span className="scrollDown__icon" aria-hidden="true"></span>
+            </button>
           )}
         </section>
 
@@ -102,7 +121,7 @@ const Slide = ({
           {hasDetailContent && (
             <p className="blog-slider__button">
               <button type="button" onClick={onOpen}>
-                See more
+                View case study
               </button>
             </p>
           )}
