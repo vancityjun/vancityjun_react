@@ -147,7 +147,7 @@
       white-space: nowrap;
 
       @media screen and (max-width: 576px) {
-        font-size: 11px;
+        display: none;
       }
     }
 
@@ -164,12 +164,9 @@
 
     @media screen and (max-width: 576px) {
       bottom: 20px;
-      width: calc(100% - 48px);
-      max-width: 280px;
-      padding: 16px 18px 10px;
       z-index: 260;
-      background: rgba(10, 17, 33, 0.26);
-      backdrop-filter: blur(6px);
+      padding: 0;
+      border-radius: 0;
     }
   }
 }
